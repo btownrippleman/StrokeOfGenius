@@ -243,7 +243,7 @@ end
 function fadingCircle(x,y,rad,strokeWidth,color)
    local xval = x+strokeWidth*math.random()
    local yval = y+strokeWidth*math.random()
-   local radius = rad * math.random()
+   local radius = 5+rad * math.random()*math.random()*math.random()*math.random()
 
 
 
@@ -267,13 +267,14 @@ end
 function touched(event)
 
   local color = {.5,1,1}
-  local radius = 12
-  local strokeWidth = 40
+  local radius = 45
+  local strokeWidth = 25
 
   if event.phase == "moved" then
-    for i = 1,1 do
+    for i = 1,5 do
       circles= circles +1
-        fadingCircle(event.x,event.y,.2*radius*(math.log(circles)),strokeWidth,color)  end
+        fadingCircle(event.x,event.y,radius,strokeWidth,color)  end
+        print ("number of circles = "..circles)
      end
 
 end
