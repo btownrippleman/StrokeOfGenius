@@ -271,7 +271,7 @@ function touched(event)
   local strokeWidth = 40
 
   if event.phase == "moved" then
-    for i = 1,5 do
+    for i = 1,1 do
       circles= circles +1
         fadingCircle(event.x,event.y,.2*radius*(math.log(circles)),strokeWidth,color)  end
      end
