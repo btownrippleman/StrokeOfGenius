@@ -44,7 +44,7 @@ function touched(event)
 
   local color = {1,0,1}
   local radius = 25
-  local strokeWidth = 35
+  local strokeWidth = 66
 
   if event.phase == "moved" then
     for i = 1,11 do
